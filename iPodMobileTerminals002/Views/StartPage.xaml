@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iPodMobileTerminals002.Views.StartPage" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="10">
+                <Label Text="オーダー"  TextColor="Black" Padding="20" FontSize="20" FontAttributes="Bold" ></Label>
+                <Button Text="更新" Style="{StaticResource buttonStyle}"   />
+            </StackLayout>
+            <StackLayout>
+                <Button Grid.Column="1" Text="注文する" FontSize="20" VerticalOptions="Center" BackgroundColor="#D2D8D6" Margin="15,80" Padding="0,50" TextColor="Black"  CornerRadius="35" FontAttributes="Bold" Clicked="Order_Clicked"/>
+                <Button Grid.Column="1" Text="注文履歴" FontSize="20" VerticalOptions="Center" BackgroundColor="#D2D8D6" Margin="15,80" Padding="0,30" TextColor="Black" CornerRadius="35" FontAttributes="Bold" />
+            </StackLayout>
+            <StackLayout Padding="80">
+                <Button Text="更新" Style="{StaticResource buttonStyle}" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

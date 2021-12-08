@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8a96126f-f0a6-40e7-a947-b51714b79b24": {
+      "ProjectGuid": "8a96126f-f0a6-40e7-a947-b51714b79b24",
+      "DisplayName": "iPodMobileTerminals002",
+      "ColorIndex": 0
+    },
+    "df6b44ac-669d-45e7-bfe1-0225c1fbb8e3": {
+      "ProjectGuid": "df6b44ac-669d-45e7-bfe1-0225c1fbb8e3",
+      "DisplayName": "iPodMobileTerminals002.Android",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

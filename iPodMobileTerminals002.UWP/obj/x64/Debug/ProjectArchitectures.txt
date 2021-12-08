@@ -1,0 +1,1 @@
+E:\StarlandProjects\iPodMobileTerminals002\iPodMobileTerminals002.UWP\iPodMobileTerminals002.UWP.csproj;x64

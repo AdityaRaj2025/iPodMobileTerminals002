@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iPodMobileTerminals002.Views.CategoryPage" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="10">
+                <Button Text="部屋" Style="{StaticResource buttonStyle}"   />
+                <Label Text="分類を選択"  TextColor="Black" Padding="20" FontSize="20" FontAttributes="Bold" ></Label>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshData}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                        <CollectionView Grid.Column="0" ItemsSource="{Binding minor}" >
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="1" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Padding="5">
+
+                                        <Frame CornerRadius="10" HasShadow="True" >
+                                            <StackLayout Orientation="Horizontal" >
+                                                <StackLayout Padding="4">
+                                                    <Label Text="{Binding CategoryName}" TextColor="Black" FontAttributes="None" FontSize="Small"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Frame>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <CollectionView Grid.Column="1" ItemsSource="{Binding major}" >
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="1" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Padding="5">
+                                        <Frame CornerRadius="10" HasShadow="True" >
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout Padding="4">
+                                                    <Label Text="{Binding CategoryName}" TextColor="Black" FontAttributes="None" FontSize="Small"/>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Frame>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </Grid>
+            </RefreshView>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" Padding="0,0,0,10">
+                <Button Text="部屋"  Style="{StaticResource buttonStyle}" />
+                <Button Text="注文確認"  Style="{StaticResource buttonStyle}" />
+            </StackLayout>
+        </StackLayout>
+             
+    </ContentPage.Content>
+</ContentPage>

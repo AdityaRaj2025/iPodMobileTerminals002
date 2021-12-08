@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"            
+             x:Class="iPodMobileTerminals002.Views.Room" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="10">
+                <Button Text="トップ" Style="{StaticResource buttonStyle}"  Clicked="Button_Clicked_Top" />
+                <Label Text="部屋を選択"  TextColor="Black" Padding="20" FontSize="20" FontAttributes="Bold" ></Label>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshData}">
+                    <CollectionView Grid.Column="0" ItemsSource="{Binding room}" >
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="3" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="5">
+                                    <Frame CornerRadius="25" HasShadow="True">
+                                        <StackLayout Orientation="Horizontal" >
+                                            <StackLayout Padding="2">
+                                                <Label Text="{Binding RoomStatus}" TextColor="Black" FontAttributes="None" FontSize="Small">
+                                                    <Label.Triggers>
+                                                        <DataTrigger TargetType="Label" Binding="{Binding RoomStatus}" Value="Booked">
+                                                            <Setter Property="BackgroundColor" Value="Red" />
+                                                        </DataTrigger>
+                                                    </Label.Triggers>
+                                                </Label>
+                                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding RoomId}" VerticalOptions="End"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </RefreshView>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" Padding="0,0,0,10">
+                <Button Text="トップ"  Style="{StaticResource buttonStyle}" />
+                <Button Text="次"  Style="{StaticResource buttonStyle}"  Clicked="Button_Clicked_Next"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
