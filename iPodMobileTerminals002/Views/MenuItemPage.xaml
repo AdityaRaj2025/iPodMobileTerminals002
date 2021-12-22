@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iPodMobileTerminals002.Views.MenuItemPage" NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="25">
+                <Button Text="分類" BackgroundColor="#EE3F60" WidthRequest="100" HeightRequest="65" TextColor="White" FontAttributes="Bold" Clicked="Button_Clicked_Category" />
+                <Label Text="商品を選択"  TextColor="Black"  FontSize="20" FontAttributes="Bold" ></Label>
+                <Button Text="注文確認" BackgroundColor="#4CC7F2" WidthRequest="110" HeightRequest="65" TextColor="White" FontAttributes="Bold" />
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshData}">
+                    <Grid>
+
+                        <CollectionView Grid.Column="0"  ItemsSource="{Binding item}" SelectionMode="Multiple" SelectionChanged="OnCollectionViewSelectionChanged" x:Name="lstInfo" SelectedItem="{Binding SelectedItem}">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="2" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Padding="5">
+
+                                        <Frame CornerRadius="5" HasShadow="True" >
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout Padding="4">
+                                                    <Label Text="{Binding ItemName}" TextColor="Black" FontAttributes="None" FontSize="Small"/>
+                                                    <Label  TextColor="Black" >
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <FormattedString.Spans>                                                               
+                                                                    <Span Text="{Binding Price}"/>
+                                                                    <Span Text=" 円"/>
+                                                                </FormattedString.Spans>
+                                                            </FormattedString> 
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                                    <Label Text="{Binding Message}" x:Name="lblCount" TextColor="Black" FontAttributes="None" FontSize="Small"></Label>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </Frame>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </Grid>
+                </RefreshView>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand"  Padding="40">
+                   
+                <Button Text="+1" Command="{Binding CountCommand}" BackgroundColor="#EE3F60" WidthRequest="55" HeightRequest="50" TextColor="White" FontAttributes="Bold" />
+                <Button Text="+5" BackgroundColor="#EE3F60" WidthRequest="55" HeightRequest="50" TextColor="White" FontAttributes="Bold" />
+                <Button Text="0" BackgroundColor="#4CC7F2" WidthRequest="55" HeightRequest="50" TextColor="White" FontAttributes="Bold" />
+                <Button Text="-1" BackgroundColor="#EE3F60" WidthRequest="55" HeightRequest="50" TextColor="White" FontAttributes="Bold"  />
+                <Button Text="-5" BackgroundColor="#EE3F60" WidthRequest="55" HeightRequest="50" TextColor="White" FontAttributes="Bold" />
+            </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" Margin="30,0,0,20" >
+                <Button Text="分類" BackgroundColor="#EE3F60" WidthRequest="160" HeightRequest="70" TextColor="White" FontAttributes="Bold" Clicked="Button_Clicked_Category" />
+                <Button Text="注文確認" BackgroundColor="#4CC7F2" WidthRequest="160" HeightRequest="70" TextColor="White" FontAttributes="Bold" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
