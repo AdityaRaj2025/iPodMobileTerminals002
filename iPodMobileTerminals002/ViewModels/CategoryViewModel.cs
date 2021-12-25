@@ -1,23 +1,21 @@
 ﻿using iPodMobileTerminals002.Models;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
-using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace iPodMobileTerminals002.ViewModels
 {
     public class CategoryViewModel : INotifyPropertyChanged
     {
-      
         public CategoryViewModel()
         {
             GetMajorCategoryData();
-            GetMinorCategoryData();
+            GetMinorCategoryData();           
         }
 
         public async void GetMajorCategoryData()
@@ -25,7 +23,7 @@ namespace iPodMobileTerminals002.ViewModels
              using (var client = new HttpClient())
              {
                 // send a GET request              
-                var uri = "http://localhost:3001/api/MajorCategory/GetMajorCategoryData";              
+                var uri = "https://ipodwebapiazure.azurewebsites.net/api/MajorCategory/GetMajorCategoryData";              
                 var result = await client.GetStringAsync(uri);
                 var MajorCategoryList = JsonConvert.DeserializeObject<List<MajorCategory>>(result);
                 major = new ObservableCollection<MajorCategory>(MajorCategoryList);
@@ -38,7 +36,7 @@ namespace iPodMobileTerminals002.ViewModels
             using (var client = new HttpClient())
             {
                 // send a GET request              
-                var uri = "http://localhost:3001/api/MinorCategory/GetMinorCategoryData";
+                var uri = "https://ipodwebapiazure.azurewebsites.net/api/MinorCategory/GetMinorCategoryData";
                
                 var result = await client.GetStringAsync(uri);
                 var MinorCategoryList = JsonConvert.DeserializeObject<List<MinorCategory>>(result);
@@ -103,7 +101,7 @@ namespace iPodMobileTerminals002.ViewModels
                 OnPropertyChanged();
             }
         }
-
+        
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

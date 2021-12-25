@@ -25,7 +25,7 @@ namespace iPodMobileTerminals002.ViewModels
             using (var client = new HttpClient())
             {
                 // send a GET request              
-                var uri = "http://localhost:3001/api/Room/GetRoomStatus";
+                var uri = "https://ipodwebapiazure.azurewebsites.net/api/Room/GetRoomStatus";
                 var result = await client.GetStringAsync(uri);
                 var RoomList = JsonConvert.DeserializeObject<List<Room>>(result);
                 room = new ObservableCollection<Room>(RoomList);
@@ -72,53 +72,7 @@ namespace iPodMobileTerminals002.ViewModels
                 OnPropertyChanged();
             }
         }
-
-        /* public class StringToColorConverter : IValueConverter
-         {
-             public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-             {
-                 string status = (string)value;
-                 if (status != null)
-                 {
-                     if (status == "Booked")
-                     {
-                         return Color.Yellow;
-                     }
-                     else
-                     {
-                         return Color.Orange;
-                     }
-                 }
-                 return Color.Orange;
-             }
-             public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-             {
-                 throw new NotImplementedException();
-             }
-         }*/
-
-        public class YesNoMaybeToColorConverter : IValueConverter
-        {
-            public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
-            {
-                switch (value)
-                {
-                    case "Booked":
-                        return Color.Red;
-                    case "Avilable":
-                        return Color.Blue;                       
-                }
-                return Color.Yellow;
-            }
-
-            public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
-            {
-                // You probably don't need this, this is used to convert the other way around
-                // so from color to yes no or maybe
-                throw new NotImplementedException();
-            }
-        }
-
+             
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
