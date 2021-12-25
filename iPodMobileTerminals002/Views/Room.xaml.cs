@@ -27,5 +27,6 @@ namespace iPodMobileTerminals002.Views
         {
             Navigation.PushAsync(new CategoryPage(), true);
         }
+        
     }
 }

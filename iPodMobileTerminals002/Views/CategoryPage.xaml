@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="iPodMobileTerminals002.Views.CategoryPage" NavigationPage.HasNavigationBar="False">
+             x:Class="iPodMobileTerminals002.Views.CategoryPage" NavigationPage.HasNavigationBar="True">
     <ContentPage.Content>
         
         <StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="10">
-                <Button Text="部屋" Style="{StaticResource buttonStyle}"   />
+                <Button Text="部屋" Style="{StaticResource buttonStyle}" Clicked="Button_Clicked_Room" />
                 <Label Text="分類を選択"  TextColor="Black" Padding="20" FontSize="20" FontAttributes="Bold" ></Label>
             </StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
@@ -23,16 +23,24 @@
                             </CollectionView.ItemsLayout>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid Padding="5">
-
-                                        <Frame CornerRadius="10" HasShadow="True" >
-                                            <StackLayout Orientation="Horizontal" >
-                                                <StackLayout Padding="4">
-                                                    <Label Text="{Binding CategoryName}" TextColor="Black" FontAttributes="None" FontSize="Small"/>
-                                                </StackLayout>
+                                    <Grid Padding="4">                                       
+                                           <Frame CornerRadius="5" HasShadow="True" >
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="OnTapped"/>
+                                                
+                                            </Frame.GestureRecognizers>
+                                               <Frame.Triggers>
+                                                        <DataTrigger TargetType="Frame" Binding="{Binding Source={x:Reference select},Path=IsChecked}" Value="true">
+                                                            <Setter Property="BackgroundColor" Value="Green" />
+                                                        </DataTrigger>
+                                                </Frame.Triggers>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Grid>                                                                                                     
+                                                     <Label Text="{Binding CategoryName}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
+                                                    <CheckBox x:Name="select"  Grid.Row="0" Grid.Column="3" />                                                                                                
+                                                </Grid>
                                             </StackLayout>
-                                        </Frame>
-
+                                        </Frame>                               
                                     </Grid>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
@@ -44,12 +52,21 @@
                             </CollectionView.ItemsLayout>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid Padding="5">
-                                        <Frame CornerRadius="10" HasShadow="True" >
+                                    <Grid Padding="4">
+                                        <Frame CornerRadius="5" HasShadow="True" >
+                                            <Frame.Triggers>
+                                                        <DataTrigger TargetType="Frame" Binding="{Binding Source={x:Reference select},Path=IsChecked}" Value="true">
+                                                            <Setter Property="BackgroundColor" Value="Green" />
+                                                        </DataTrigger>
+                                                </Frame.Triggers>
                                             <StackLayout Orientation="Horizontal">
-                                                <StackLayout Padding="4">
-                                                    <Label Text="{Binding CategoryName}" TextColor="Black" FontAttributes="None" FontSize="Small"/>
-                                                </StackLayout>
+                                                
+                                                    <Grid >                                                                                                     
+                                                     <Label Text="{Binding CategoryName}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
+                                                    <CheckBox x:Name="select"  Grid.Row="0" Grid.Column="3" />                                                                                                
+                                                </Grid>
+                                                                                                                                                      
+                                                
                                             </StackLayout>
                                         </Frame>
                                     </Grid>
@@ -59,9 +76,9 @@
                     </Grid>
             </RefreshView>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" VerticalOptions="End" Padding="0,0,0,10">
-                <Button Text="部屋"  Style="{StaticResource buttonStyle}" />
-                <Button Text="注文確認"  Style="{StaticResource buttonStyle}" />
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" Padding="0,0,0,20">
+                <Button Text="部屋"  Style="{StaticResource buttonStyle}" Clicked="Button_Clicked_Room" />
+                <Button Text="注文確認"  Style="{StaticResource buttonStyle}" Clicked="Button_Clicked_CategoryConfirmation" />
             </StackLayout>
         </StackLayout>
              

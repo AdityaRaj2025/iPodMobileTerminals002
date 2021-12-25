@@ -126,13 +126,13 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2244" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\iPodMobileTerminals002\iPodMobileTerminals002.csproj">
-      <Project>{8ACFCCED-EB23-498A-A806-426A35C034CC}</Project>
+      <Project>{8A96126F-F0A6-40E7-A947-B51714B79B24}</Project>
       <Name>iPodMobileTerminals002</Name>
     </ProjectReference>
   </ItemGroup>

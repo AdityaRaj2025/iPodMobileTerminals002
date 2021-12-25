@@ -13,7 +13,7 @@
 namespace iPodMobileTerminals002.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\CategoryPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/CategoryPage.xaml")]
     public partial class CategoryPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

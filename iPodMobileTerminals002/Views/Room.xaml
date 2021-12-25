@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"            
-             x:Class="iPodMobileTerminals002.Views.Room" NavigationPage.HasNavigationBar="False">
+             x:Class="iPodMobileTerminals002.Views.Room" NavigationPage.HasNavigationBar="True">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="10">
@@ -10,16 +10,16 @@
             </StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand">
                 <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshData}">
-                    <CollectionView Grid.Column="0" ItemsSource="{Binding room}" >
+                    <CollectionView Grid.Column="0" ItemsSource="{Binding room}"  >
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout Orientation="Vertical" Span="3" />
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Grid Padding="5">
-                                    <Frame CornerRadius="25" HasShadow="True">
-                                        <StackLayout Orientation="Horizontal" >
-                                            <StackLayout Padding="2">
+                                    <Frame CornerRadius="10" HasShadow="True">                                       
+                                       <StackLayout Orientation="Horizontal" >
+                                            <StackLayout Padding="2">                                          
                                                 <Label Text="{Binding RoomStatus}" TextColor="Black" FontAttributes="None" FontSize="Small">
                                                     <Label.Triggers>
                                                         <DataTrigger TargetType="Label" Binding="{Binding RoomStatus}" Value="Booked">
@@ -37,8 +37,8 @@
                     </CollectionView>
                 </RefreshView>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" VerticalOptions="End" Padding="0,0,0,10">
-                <Button Text="トップ"  Style="{StaticResource buttonStyle}" />
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" Padding="0,0,0,20">
+                <Button Text="トップ"  Style="{StaticResource buttonStyle}" Clicked="Button_Clicked_Top" />
                 <Button Text="次"  Style="{StaticResource buttonStyle}"  Clicked="Button_Clicked_Next"/>
             </StackLayout>
         </StackLayout>

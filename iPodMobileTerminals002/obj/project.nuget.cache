@@ -1,15 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "lpp6ujmgSrm522Zvw8roBXSu0RO5QmNUJqlDi/7T8yk2jtTTCnhX30DSvCTQ622l1JpOadoR1tnj6nOfSwcFQg==",
+  "dgSpecHash": "1bgnf8L9WzqP/Ek9o7vkOjfdWwnJgsCRlfpzSxx65NHBISQNiDwvZTKLFU3S5el3gNz/NBy19FURo0pSWSIUAw==",
   "success": true,
-  "projectFilePath": "E:\\StarlandProjects\\iPodMobileTerminals002\\iPodMobileTerminals002\\iPodMobileTerminals002.csproj",
+  "projectFilePath": "/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/iPodMobileTerminals002.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ar199\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\ar199\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\ar199\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\ar199\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\ar199\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\ar199\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "/Users/adityaraj/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/adityaraj/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/adityaraj/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/adityaraj/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/adityaraj/.nuget/packages/system.reflection.emit.ilgeneration/4.7.0/system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512",
+    "/Users/adityaraj/.nuget/packages/system.reflection.emit.lightweight/4.7.0/system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
+    "/Users/adityaraj/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.3/system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "/Users/adityaraj/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "/Users/adityaraj/.nuget/packages/xamarin.communitytoolkit/1.3.1/xamarin.communitytoolkit.1.3.1.nupkg.sha512",
+    "/Users/adityaraj/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
+    "/Users/adityaraj/.nuget/packages/xamarin.forms/5.0.0.2291/xamarin.forms.5.0.0.2291.nupkg.sha512"
   ],
   "logs": []
 }

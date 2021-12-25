@@ -1,34 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\StarlandProjects\\iPodMobileTerminals002\\iPodMobileTerminals002\\iPodMobileTerminals002.csproj": {}
+    "/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/iPodMobileTerminals002.csproj": {}
   },
   "projects": {
-    "E:\\StarlandProjects\\iPodMobileTerminals002\\iPodMobileTerminals002\\iPodMobileTerminals002.csproj": {
+    "/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/iPodMobileTerminals002.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\StarlandProjects\\iPodMobileTerminals002\\iPodMobileTerminals002\\iPodMobileTerminals002.csproj",
+        "projectUniqueName": "/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/iPodMobileTerminals002.csproj",
         "projectName": "iPodMobileTerminals002",
-        "projectPath": "E:\\StarlandProjects\\iPodMobileTerminals002\\iPodMobileTerminals002\\iPodMobileTerminals002.csproj",
-        "packagesPath": "C:\\Users\\ar199\\.nuget\\packages\\",
-        "outputPath": "E:\\StarlandProjects\\iPodMobileTerminals002\\iPodMobileTerminals002\\obj\\",
+        "projectPath": "/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/iPodMobileTerminals002.csproj",
+        "packagesPath": "/Users/adityaraj/.nuget/packages/",
+        "outputPath": "/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ar199\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/adityaraj/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -57,13 +48,17 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[1.3.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2196, )"
+              "version": "[5.0.0.2291, )"
             }
           },
           "imports": [
@@ -76,7 +71,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }
