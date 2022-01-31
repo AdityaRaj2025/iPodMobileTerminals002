@@ -6,7 +6,7 @@ namespace iPodMobileTerminals002.Models
 {
     public class MajorCategory
     {    
-            public int MajorCategoryCode { get; set; }
+            public string MajorCategoryCode { get; set; }
             public string CategoryName { get; set; }      
     }
 }

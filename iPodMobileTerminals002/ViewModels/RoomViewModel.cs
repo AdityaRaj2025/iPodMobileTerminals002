@@ -25,7 +25,7 @@ namespace iPodMobileTerminals002.ViewModels
             using (var client = new HttpClient())
             {
                 // send a GET request              
-                var uri = "https://ipodwebapiazure.azurewebsites.net/api/Room/GetRoomStatus";
+                var uri = "https://ipodwebapi2022.azurewebsites.net/api/Room/GetRoomStatus";
                 var result = await client.GetStringAsync(uri);
                 var RoomList = JsonConvert.DeserializeObject<List<Room>>(result);
                 room = new ObservableCollection<Room>(RoomList);

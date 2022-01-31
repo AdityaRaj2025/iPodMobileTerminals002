@@ -6,7 +6,8 @@ namespace iPodMobileTerminals002.Models
 {
     public class Room
     {
-        public int RoomId { get; set; }
-        public string RoomStatus { get; set; }
+        public string RoomId { get; set; }
+        public string DisplayName {get;set;}
+        public string Status { get; set; }
     }
 }

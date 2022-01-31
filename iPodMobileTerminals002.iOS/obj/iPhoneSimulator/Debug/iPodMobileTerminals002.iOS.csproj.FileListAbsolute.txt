@@ -1,6 +1,15 @@
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/iPodMobileTerminals002.iOS.exe
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/iPodMobileTerminals002.iOS.pdb
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/SQLite-net.dll
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.batteries_v2.dll
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.nativelibrary.dll
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.core.dll
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.provider.dynamic_cdecl.dll
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/System.Buffers.dll
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/System.Memory.dll
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/System.Runtime.CompilerServices.Unsafe.dll
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/Xamarin.CommunityToolkit.dll
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
@@ -51,7 +60,6 @@
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/obj/iPhoneSimulator/Debug/iPodMobileTerminals002.iOS.csproj.CopyComplete
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/obj/iPhoneSimulator/Debug/iPodMobileTerminals002.iOS.exe
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/obj/iPhoneSimulator/Debug/iPodMobileTerminals002.iOS.pdb
-/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/bin/iPhoneSimulator/Debug/Xamarin.CommunityToolkit.dll
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.2/actool/_PartialAppManifest.items
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.2/actool/_BundleResourceWithLogicalName.items
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.2/actool/_ProcessedImageAssetsPath.items

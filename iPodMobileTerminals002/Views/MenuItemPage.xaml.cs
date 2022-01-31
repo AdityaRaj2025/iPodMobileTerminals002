@@ -32,5 +32,9 @@ namespace iPodMobileTerminals002.Views
             var current = e.CurrentSelection;                      
         }
 
+        void Button_ClickedNext(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new OrderConfirmationPage(), true);
+        }
     }
 }

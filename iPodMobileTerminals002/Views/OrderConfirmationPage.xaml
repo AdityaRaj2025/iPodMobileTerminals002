@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:iPodMobileTerminals002" xmlns:local1="clr-namespace:iPodMobileTerminals002.ViewModels"
+    x:Class="iPodMobileTerminals002.Views.OrderConfirmationPage" NavigationPage.HasNavigationBar="True">
+
+     <ContentPage.BindingContext>
+        <local1:OrderConfirmationViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="10">
+            <Button Text="続ける" BackgroundColor="#EE3F60" WidthRequest="100" HeightRequest="65" TextColor="White" FontAttributes="Bold" />
+            <Label Text="注文内容の確認"  TextColor="Black"  FontSize="20" FontAttributes="Bold" ></Label>
+            
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="25">
+            <Entry Text="コカコーラ" IsReadOnly="True" WidthRequest="150"/>
+            <Entry Text="{Binding DisplayCount}" IsReadOnly="True"/>
+            <Button Text="+" Command="{Binding IncreaseCommand}" BackgroundColor="#EE3F60" WidthRequest="55" HeightRequest="50" TextColor="White" FontAttributes="Bold"/>
+            <Button Text="-" Command="{Binding DecreaseCommand}" BackgroundColor="#4CC7F2" WidthRequest="55" HeightRequest="50" TextColor="White" FontAttributes="Bold"/>
+        </StackLayout>
+        
+
+           <StackLayout Orientation="Horizontal" VerticalOptions="End" Margin="30,0,0,20" >
+                <Button Text="注文する" BackgroundColor="#EE3F60" WidthRequest="160" HeightRequest="70" TextColor="White" FontAttributes="Bold"  />
+                <Button Text="注文内容をクリアする" BackgroundColor="#4CC7F2" WidthRequest="160" HeightRequest="70" TextColor="White" FontAttributes="Bold" />
+            </StackLayout>
+    </StackLayout>
+</ContentPage>

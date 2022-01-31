@@ -24,8 +24,11 @@ E:/StarlandProjects/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/nets
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/iPodMobileTerminals002.GeneratedMSBuildEditorConfig.editorconfig
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/Views/AddMajorCategoryPage.xaml.g.cs
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/Views/CategoryPage.xaml.g.cs
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/Views/MenuItemPage.xaml.g.cs
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/Views/OrderConfirmationPage.xaml.g.cs
+/Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/Views/OrderHistory.xaml.g.cs
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/Views/Room.xaml.g.cs
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/Views/StartPage.xaml.g.cs
 /Users/adityaraj/Starland/iPodMobileTerminals002/iPodMobileTerminals002/obj/Debug/netstandard2.0/iPodMobileTerminals002.AssemblyInfoInputs.cache

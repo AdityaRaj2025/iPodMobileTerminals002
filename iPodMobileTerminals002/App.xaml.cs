@@ -11,8 +11,8 @@ namespace iPodMobileTerminals002
         {
             InitializeComponent();
 
-           // MainPage = new StartPage();
-            MainPage = new NavigationPage(new StartPage());
+           //MainPage = new OrderConfirmationPage();
+           MainPage = new NavigationPage(new StartPage());
         }
 
         protected override void OnStart()

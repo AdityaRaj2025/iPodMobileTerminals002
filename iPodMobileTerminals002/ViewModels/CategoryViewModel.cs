@@ -1,12 +1,16 @@
 ﻿using iPodMobileTerminals002.Models;
 using Newtonsoft.Json;
+using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Xamarin.Forms;
+using iPodMobileTerminals002.Views;
 
 namespace iPodMobileTerminals002.ViewModels
 {
@@ -15,18 +19,31 @@ namespace iPodMobileTerminals002.ViewModels
         public CategoryViewModel()
         {
             GetMajorCategoryData();
-            GetMinorCategoryData();           
+            GetMinorCategoryData();
         }
+
+        public Command ButtonClickCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    // Here I want to pass MajorCategoryCode on click command to api for Get MinorCategory List.
+                    // ここでは、クリックコマンドのMajorCategoryCodeをGet MinorCategoryListのAPIに渡します。
+                });
+            }
+        }
+
 
         public async void GetMajorCategoryData()
         {
              using (var client = new HttpClient())
              {
                 // send a GET request              
-                var uri = "https://ipodwebapiazure.azurewebsites.net/api/MajorCategory/GetMajorCategoryData";              
+                var uri = "https://ipodwebapi2022.azurewebsites.net/api/MajorCategory/GetMajorCategoryData";              
                 var result = await client.GetStringAsync(uri);
                 var MajorCategoryList = JsonConvert.DeserializeObject<List<MajorCategory>>(result);
-                major = new ObservableCollection<MajorCategory>(MajorCategoryList);
+                major = new ObservableCollection<MajorCategory>(MajorCategoryList);               
                 IsRefreshing = false;
              }          
         }
@@ -36,7 +53,7 @@ namespace iPodMobileTerminals002.ViewModels
             using (var client = new HttpClient())
             {
                 // send a GET request              
-                var uri = "https://ipodwebapiazure.azurewebsites.net/api/MinorCategory/GetMinorCategoryData";
+                var uri = "https://ipodwebapi2022.azurewebsites.net/api/MinorCategory/GetMinorCategoryData";
                
                 var result = await client.GetStringAsync(uri);
                 var MinorCategoryList = JsonConvert.DeserializeObject<List<MinorCategory>>(result);

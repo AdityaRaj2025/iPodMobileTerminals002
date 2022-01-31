@@ -13,7 +13,7 @@
                 <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshData}">
                     <Grid>
 
-                        <CollectionView Grid.Column="0"  ItemsSource="{Binding item}" SelectionMode="Multiple" SelectionChanged="OnCollectionViewSelectionChanged" x:Name="lstInfo" SelectedItem="{Binding SelectedItem}">
+                        <CollectionView Grid.Column="0"  ItemsSource="{Binding item}" SelectionMode="Single" SelectionChanged="OnCollectionViewSelectionChanged" x:Name="lstInfo" SelectedItem="{Binding SelectedItem}">
                             <CollectionView.ItemsLayout>
                                 <GridItemsLayout Orientation="Vertical" Span="2" />
                             </CollectionView.ItemsLayout>
@@ -58,7 +58,7 @@
 
             <StackLayout Orientation="Horizontal" VerticalOptions="End" Margin="30,0,0,20" >
                 <Button Text="分類" BackgroundColor="#EE3F60" WidthRequest="160" HeightRequest="70" TextColor="White" FontAttributes="Bold" Clicked="Button_Clicked_Category" />
-                <Button Text="注文確認" BackgroundColor="#4CC7F2" WidthRequest="160" HeightRequest="70" TextColor="White" FontAttributes="Bold" />
+                <Button Text="注文確認" BackgroundColor="#4CC7F2" WidthRequest="160" HeightRequest="70" TextColor="White" FontAttributes="Bold" Clicked="Button_ClickedNext" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

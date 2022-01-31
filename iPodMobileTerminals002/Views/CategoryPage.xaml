@@ -17,58 +17,31 @@
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
 
-                        <CollectionView Grid.Column="0" ItemsSource="{Binding minor}" >
+                        <CollectionView Grid.Column="0" ItemsSource="{Binding major}" >
                             <CollectionView.ItemsLayout>
                                 <GridItemsLayout Orientation="Vertical" Span="1" />
                             </CollectionView.ItemsLayout>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid Padding="4">                                       
-                                           <Frame CornerRadius="5" HasShadow="True" >
-                                            <Frame.GestureRecognizers>
-                                                <TapGestureRecognizer Tapped="OnTapped"/>
-                                                
-                                            </Frame.GestureRecognizers>
-                                               <Frame.Triggers>
-                                                        <DataTrigger TargetType="Frame" Binding="{Binding Source={x:Reference select},Path=IsChecked}" Value="true">
-                                                            <Setter Property="BackgroundColor" Value="Green" />
-                                                        </DataTrigger>
-                                                </Frame.Triggers>
-                                            <StackLayout Orientation="Horizontal">
-                                                <Grid>                                                                                                     
-                                                     <Label Text="{Binding CategoryName}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
-                                                    <CheckBox x:Name="select"  Grid.Row="0" Grid.Column="3" />                                                                                                
-                                                </Grid>
-                                            </StackLayout>
-                                        </Frame>                               
+                                    <Grid Padding="5">                                                                                
+                                        <StackLayout >                                                                                                      
+                                            <Button x:Name="myButton" Text="{Binding CategoryName}" Command="{Binding ButtonClickCommand}" CommandParameter="{x:Reference myButton}" BackgroundColor="#4CC7F2" WidthRequest="260" HeightRequest="70" TextColor="White" FontAttributes="Bold"/>                                                                                                                                           
+                                        </StackLayout>                                                                     
                                     </Grid>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
 
-                        <CollectionView Grid.Column="1" ItemsSource="{Binding major}" >
+                        <CollectionView Grid.Column="1" x:Name="datasv" ItemsSource="{Binding minor}" >
                             <CollectionView.ItemsLayout>
                                 <GridItemsLayout Orientation="Vertical" Span="1" />
                             </CollectionView.ItemsLayout>
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid Padding="4">
-                                        <Frame CornerRadius="5" HasShadow="True" >
-                                            <Frame.Triggers>
-                                                        <DataTrigger TargetType="Frame" Binding="{Binding Source={x:Reference select},Path=IsChecked}" Value="true">
-                                                            <Setter Property="BackgroundColor" Value="Green" />
-                                                        </DataTrigger>
-                                                </Frame.Triggers>
-                                            <StackLayout Orientation="Horizontal">
-                                                
-                                                    <Grid >                                                                                                     
-                                                     <Label Text="{Binding CategoryName}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
-                                                    <CheckBox x:Name="select"  Grid.Row="0" Grid.Column="3" />                                                                                                
-                                                </Grid>
-                                                                                                                                                      
-                                                
-                                            </StackLayout>
-                                        </Frame>
+                                        <StackLayout >                                                                                                      
+                                             <Button Text="{Binding CategoryName}" BackgroundColor="#4CC7F2" WidthRequest="260" HeightRequest="70" TextColor="White" FontAttributes="Bold"/>                                                                                                                                           
+                                        </StackLayout>                                           
                                     </Grid>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>

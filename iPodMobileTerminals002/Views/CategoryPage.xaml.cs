@@ -20,6 +20,7 @@ namespace iPodMobileTerminals002.Views
             InitializeComponent();
             
             BindingContext = new CategoryViewModel();
+           
             Navigation.PopAsync(true);
             
         }
